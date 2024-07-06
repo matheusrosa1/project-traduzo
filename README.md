@@ -117,5 +117,5 @@ Envie uma requisição DELETE para `http://127.0.0.1:8000/admin/history/<id>` co
 
 ## Licença
 
-Este projeto é licenciado sob os termos da licença MIT. Consulte o arquivo [LICENSE]([https://github.com/matheusrosa1/project-traduzo/tree/main?tab=MIT-1-ov-file]) para obter mais detalhes.
+Este projeto é licenciado sob os termos da licença MIT. Consulte o arquivo [LICENSE][https://github.com/matheusrosa1/project-traduzo/tree/main?tab=MIT-1-ov-file]) para obter mais detalhes.
 
