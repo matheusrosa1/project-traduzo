@@ -5,10 +5,10 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 ## Sumário
 
 - [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
 - [Testes](#testes)
+- [Uso](#uso)
 - [Endpoints](#endpoints)
+- [Testes](#testes)
 - [Licença](#licença)
 
 ## Instalação
