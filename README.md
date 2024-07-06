@@ -13,14 +13,14 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 
 ## Instalação
 
-[1] Clone o repositório:
+**[1]** Clone o repositório:
 
 ```bash
 git clone https://github.com/matheusrosa1/project-traduzo.git
 cd project-traduzo
 ```
 
-[2] Crie um ambiente virtual e ative-o:
+**[2]** Crie um ambiente virtual e ative-o:
 
 ```bash
 python -m venv venv
@@ -28,19 +28,21 @@ source venv/bin/activate  # Para sistemas Unix
 venv\Scripts\activate  # Para Windows
  ```
 
-[3] Instale as dependências do projeto:
+**[3]** Instale as dependências do projeto:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-[4 - Opção A] Banco e Flask pelo Docker
+**Escolha uma opção:**
+
+**[4 - Opção A]** Banco e Flask pelo Docker
 
 ```bash
 docker compose up translate
 ```
 
-[4 - Opção B] Banco pelo Docker, Flask localmente pelo ambiente virtual
+**[4 - Opção B]** Banco pelo Docker, Flask localmente pelo ambiente virtual
 
 ```bash
 docker compose up -d mongodb
@@ -48,7 +50,7 @@ docker compose up -d mongodb
 python3 src/app.py
 ```
 
-[5] A aplicação automaticamente já estará disponível na rota http://127.0.0.1:8000/
+**[5]** A aplicação automaticamente já estará disponível na rota http://127.0.0.1:8000/
 
 
 ## Testes
@@ -59,15 +61,25 @@ python3 src/app.py
 
 2. **Execução dos Testes:**
 
-    - Para executar os testes automatizados, use:
+<summary>Pytest pelo ambiente virtual </summary>
 
-      ```bash
-      pytest
-      ```
+**[1]** Crie o ambiente virtual, e instale as dependências, suba o banco, conforme seção preparando ambiente
 
-3. **Testes Específicos:**
+**[2]** Execute os testes
 
-    - Para verificar a funcionalidade de exclusão do histórico de traduções, o teste `test_history_delete` simula a exclusão de um registro específico e verifica se ele foi removido do banco de dados.
+```bash
+python3 -m pytest
+```
+
+<summary>Pytest pelo Container Docker </summary>
+
+**[1]** Execute o projeto conforme seção preparando ambiente
+
+**[2]** Execute os testes diretamente, ou após acessar o sh do container
+
+```bash
+docker compose exec -it translate pytest
+```
 
 ## Endpoints
 
@@ -84,28 +96,26 @@ python3 src/app.py
 
 - `DELETE /admin/history/<id>` - Exclui um registro de histórico específico. Requer um token de autorização no cabeçalho da requisição.
 
-## Exemplo de Uso da API
+## Uso
 
-### Tradução de Texto
+### Inteface Web
 
-Para traduzir um texto, envie uma requisição POST para `http://localhost:8000/` com os seguintes campos de formulário:
+- Acesse a interface do projeto em seu navegador:
 
-- `text-to-translate` - O texto que você deseja traduzir.
-- `translate-from` - O idioma original do texto (ex.: "en").
-- `translate-to` - O idioma para o qual deseja traduzir o texto (ex.: "pt").
+- URL: http://127.0.0.1:8000
+- Realize traduções de texto entre diferentes idiomas de forma intuitiva.
 
-### Listagem de Histórico
+### API Endpoints
 
-Envie uma requisição GET para `http://localhost:8000/history` para obter todos os registros de tradução.
+#### Listagem de Histórico
 
-### Exclusão de Histórico
+Envie uma requisição GET para `http://127.0.0.1:8000/history` para obter todos os registros de tradução.
 
-Envie uma requisição DELETE para `http://localhost:8000/admin/history/<id>` com o cabeçalho `Authorization` contendo o token do administrador e o cabeçalho `User` com o nome de usuário do administrador.
+#### Exclusão de Histórico
+
+Envie uma requisição DELETE para `http://127.0.0.1:8000/admin/history/<id>` com o cabeçalho `Authorization` contendo o token do administrador e o cabeçalho `User` com o nome de usuário do administrador.
 
 ## Licença
 
 Este projeto é licenciado sob os termos da licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
 
----
-
-Projeto desenvolvido como parte de um exercício escolar para praticar o uso de Flask, MongoDB, e a integração com APIs externas.
