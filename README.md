@@ -30,23 +30,23 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 
 [3] Instale as dependências do projeto:
 
-    ```bash
+```bash
     pip install -r requirements.txt
-    ```
+```
 
 [4 - Opção A] Banco e Flask pelo Docker
 
-    ```bash
+```bash
     docker compose up translate
-    ```
+```
 
 [4 - Opção B] Banco pelo Docker, Flask localmente pelo ambiente virtual
 
-    ```bash
+```bash
     docker compose up -d mongodb
 
     python3 src/app.py
-    ```
+```
 
 ## Uso
 
