@@ -34,30 +34,19 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
     pip install -r requirements.txt
     ```
 
-## Configuração
+4. [Opção A] Banco e Flask pelo Docker
 
-1. **Configuração do Banco de Dados MongoDB:**
+    ```bash
+    docker compose up translate
+    ```
 
-    - Configure a variável de ambiente `MONGO_URI` para apontar para a instância do MongoDB que será usada:
+4. [Opção B] Banco pelo Docker, Flask localmente pelo ambiente virtual
 
-      ```bash
-      export MONGO_URI="mongodb://localhost:27017/traduzo_db"  # Exemplo para Unix
-      set MONGO_URI="mongodb://localhost:27017/traduzo_db"  # Exemplo para Windows
-      ```
+    ```bash
+    docker compose up -d mongodb
 
-    - Configure a variável de ambiente `DB_NAME` com o nome do banco de dados:
-
-      ```bash
-      export DB_NAME="traduzo_db"
-      ```
-
-2. **Configuração da API do Google Translator:**
-
-    - Não há configuração específica necessária para a API do Google Translator, pois ela é usada diretamente pela biblioteca `deep-translator`.
-
-3. **Outras Variáveis de Ambiente:**
-
-    - Crie um arquivo `.env` na raiz do projeto para armazenar outras variáveis de ambiente necessárias, como tokens de autenticação.
+    python3 src/app.py
+    ```
 
 ## Uso
 
