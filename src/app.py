@@ -10,9 +10,13 @@ from controllers.translate_controller import translate_controller
 
 from controllers.history_controller import history_controller
 
+from database.seed_language import seed_language
+
 app = Flask(__name__)
 app.template_folder = "views/templates"
 app.static_folder = "views/static"
+
+seed_language()
 
 app.register_blueprint(admin_controller, url_prefix="/admin")
 app.register_blueprint(translate_controller, url_prefix="/")
