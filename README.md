@@ -8,7 +8,6 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 - [Testes](#testes)
 - [Uso](#uso)
 - [Endpoints](#endpoints)
-- [Testes](#testes)
 - [Licença](#licença)
 
 ## Instalação
@@ -114,8 +113,6 @@ Envie uma requisição GET para `http://127.0.0.1:8000/history` para obter todos
 #### Exclusão de Histórico
 
 Envie uma requisição DELETE para `http://127.0.0.1:8000/admin/history/<id>` com o cabeçalho `Authorization` contendo o token do administrador e o cabeçalho `User` com o nome de usuário do administrador.
-
-## Licença
 
 ## Licença
 
