@@ -15,18 +15,18 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 
 [1] Clone o repositório:
 
-    ```bash
+```bash
     git clone https://github.com/matheusrosa1/project-traduzo.git
     cd project-traduzo
-    ```
+```
 
 [2] Crie um ambiente virtual e ative-o:
 
-    ```bash
+```bash
     python -m venv venv
     source venv/bin/activate  # Para sistemas Unix
     venv\Scripts\activate  # Para Windows
-    ```
+ ```
 
 [3] Instale as dependências do projeto:
 
