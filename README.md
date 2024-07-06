@@ -13,14 +13,14 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
 
 ## Instalação
 
-1. Clone o repositório:
+[1] Clone o repositório:
 
     ```bash
     git clone https://github.com/matheusrosa1/project-traduzo.git
     cd project-traduzo
     ```
 
-2. Crie um ambiente virtual e ative-o:
+[2] Crie um ambiente virtual e ative-o:
 
     ```bash
     python -m venv venv
@@ -28,19 +28,19 @@ Project Traduzo é uma aplicação web que permite a tradução de textos entre 
     venv\Scripts\activate  # Para Windows
     ```
 
-3. Instale as dependências do projeto:
+[3] Instale as dependências do projeto:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4. [Opção A] Banco e Flask pelo Docker
+[4 - Opção A] Banco e Flask pelo Docker
 
     ```bash
     docker compose up translate
     ```
 
-4. [Opção B] Banco pelo Docker, Flask localmente pelo ambiente virtual
+[4 - Opção B] Banco pelo Docker, Flask localmente pelo ambiente virtual
 
     ```bash
     docker compose up -d mongodb
